@@ -4,10 +4,8 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 development:
-  adapter: postgres
-  encoding: utf8
-  database: walkable_to_dev
-  pool: 5
+  adapter: postgresql 
+  database: walkableto_dev
   username: walkable_pg_user
   password: ww7xDqgIJ1iKJnI
   host: 192.168.0.100
