@@ -26,11 +26,14 @@
     %ul.title-area
       %li.name
         %h1= link_to "Walkable To", welcome_path
+    %section.top-bar-section
+      %ul.right
+        %li.divider
+        %li= link_to "Login", login_path
   %div.row
-    %div.large-8.columns
-      = yield
+    = yield
+
 
   = javascript_include_tag "application"
 
 :plain
-  </html>
