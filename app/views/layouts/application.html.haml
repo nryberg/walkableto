@@ -15,13 +15,14 @@
   -# Set the viewport width to device width for mobile
   %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }
 
-  %title= content_for?(:title) ? yield(:title) : "Untitled"
+  %title= content_for?(:title) ? yield(:title) : "Walkeable To"
 
   = stylesheet_link_tag "application"
   = javascript_include_tag "vendor/custom.modernizr"
   = csrf_meta_tag
 
 %body
+  /= javascript_include_tag "application"
   %nav.top-bar
     %ul.title-area
       %li.name
@@ -29,11 +30,13 @@
     %section.top-bar-section
       %ul.right
         %li.divider
-        %li= link_to "Login with Twitter", "/auth/twitter"
+        - if current_user
+          %li.active= "Signed in as " + current_user.name
+        - else
+          %li.active= link_to "Login with Twitter", "/auth/twitter"
   %div.row
     = yield
 
 
-  = javascript_include_tag "application"
 
 :plain
