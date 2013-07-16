@@ -40,4 +40,4 @@ gem 'haml-rails'
 gem 'thin'
 gem 'pg'
 gem 'zurb-foundation'
-gem 'omniauth-twitter'
+gem 'omniauth-twitter', "~> 1.0.0"
