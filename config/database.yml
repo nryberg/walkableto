@@ -6,8 +6,8 @@
 development:
   adapter: postgresql 
   database: walkableto_dev
-  username: <%=ENV["WALK_USERNAME"]%>
-  password: <%=ENV["WALK_PASSWORD"]%>
+  username: <%=ENV['WALK_USERNAME']%>
+  password: <%=ENV['WALK_PASSWORD']%>
   host: 192.168.0.100
 
 # Warning: The database defined as "test" will be erased and
