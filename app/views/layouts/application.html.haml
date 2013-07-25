@@ -19,14 +19,15 @@
 
   = stylesheet_link_tag "application"
   = javascript_include_tag "vendor/custom.modernizr"
+  = javascript_include_tag "application"
   = csrf_meta_tag
 
 %body
-  /= javascript_include_tag "application"
   %nav.top-bar
     %ul.title-area
       %li.name
         %h1= link_to "Walkable To", welcome_path
+      %li.toggle-topbar
     %section.top-bar-section
       %ul.right
         %li.divider
@@ -36,7 +37,6 @@
           %li.active= link_to "Login with Twitter", "/auth/twitter"
   %div.row
     = yield
-
 
 
 :plain

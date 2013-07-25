@@ -30,6 +30,7 @@ $default-float: left;
 
 // $body-bg: #fff;
 // $body-font-color: #222;
+// $body-font-color: #0000FF;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
@@ -1204,8 +1205,8 @@ $default-float: left;
 
 // Background color for the top bar
 
-// $topbar-bg: #111 !default;
-
+// $topbar-bg: #00FFFF !default;
+$topbar-bg: #212D48 !default;
 // Height and margin
 
 // $topbar-height: 45px;
@@ -1269,5 +1270,10 @@ $default-float: left;
 // Sticky Class
 
 // $topbar-sticky-class: ".sticky";
-
+ul.right {
+  background-color:#212D48;
+  li.active {
+    color: white;
+    }
+  }
 @import 'foundation';
